@@ -1,0 +1,12 @@
+# 01_load_and_module_scoring.R
+library(Seurat)
+mac_module <- list(c('SPP1','TREM2','CD9','GPNMB','APOE','LGALS3'))
+fibro_module <- list(c('POSTN','COL1A1','COL1A2','ACTA2','FN1','CTHRC1'))
+lung <- readRDS('../../lung_mac_annotated.rds'); lung <- JoinLayers(lung)
+lung <- AddModuleScore(lung, features = mac_module, name = 'SPP1_Mac_Score')
+mac_dkd <- readRDS('../../mac_dkd.rds'); mac_dkd <- JoinLayers(mac_dkd)
+mac_dkd <- AddModuleScore(mac_dkd, features = mac_module, name = 'SPP1_Mac_Score')
+fibro_lung <- readRDS('../../fibro_lung_final.rds')
+fibro_lung <- AddModuleScore(fibro_lung, features = fibro_module, name = 'MyoFibro')
+fibro_dkd <- readRDS('../../fibro_dkd_final.rds')
+fibro_dkd <- AddModuleScore(fibro_dkd, features = fibro_module, name = 'MyoFibro')
