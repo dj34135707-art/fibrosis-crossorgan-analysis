@@ -25,7 +25,7 @@ All raw datasets are publicly available:
 | Bulk | Liver | GSE84044 | 124 |
 
 Processed intermediate files are available at Zenodo:
-**DOI: [10.5281/zenodo.XXXXXXX]** (to be assigned after first release)
+**DOI: [10.5281/zenodo.23150833]** (https://doi.org/10.5281/zenodo.23150833)
 
 ## Requirements
 
